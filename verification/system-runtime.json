@@ -1,0 +1,236 @@
+{
+  "capabilities": {
+    "ffmpeg": "C:\\Users\\Win\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.EXE",
+    "ffprobe": "C:\\Users\\Win\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffprobe.EXE",
+    "soffice": "Unavailable",
+    "magick": "Unavailable",
+    "PIL": "Available",
+    "pymupdf": "Available",
+    "openpyxl": "Available",
+    "docx": "Available",
+    "pptx": "Available",
+    "py7zr": "Available",
+    "tkinterdnd2": "Available"
+  },
+  "results": [
+    {
+      "input_format": "PNG image",
+      "destination_format": "jpg",
+      "classification": "Native conversion",
+      "route": "input:image \u2192 Pillow image decoder \u2192 Pillow JPG encoder \u2192 output:jpg",
+      "input_size": 211,
+      "output_size": 725,
+      "duration": 0.00829169999997248,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\image.jpg",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PNG image",
+      "destination_format": "wav",
+      "classification": "Semantic conversion",
+      "route": "input:image \u2192 Pillow image decoder \u2192 image sonification / brightness \u2192 PCM / FFmpeg audio encoder \u2192 output:wav",
+      "input_size": 211,
+      "output_size": 8864,
+      "duration": 0.1572478999996747,
+      "warnings": [
+        "Image sonification maps horizontal position to time and vertical position to pitch (110 Hz upward); brightness controls amplitude."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\image.wav",
+      "additional_paths": []
+    },
+    {
+      "input_format": "XLSX table",
+      "destination_format": "mp3",
+      "classification": "Semantic conversion",
+      "route": "input:table \u2192 structured table parser \u2192 spreadsheet pitch sonification \u2192 PCM / FFmpeg audio encoder \u2192 output:mp3",
+      "input_size": 4867,
+      "output_size": 1271,
+      "duration": 0.2594109000001481,
+      "warnings": [
+        "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained.",
+        "Rows map to time; columns to tones. Non-numeric values use character sums. At most 16 columns are sounded."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\table.mp3",
+      "additional_paths": []
+    },
+    {
+      "input_format": "DOCX document",
+      "destination_format": "pdf",
+      "classification": "Semantic conversion",
+      "route": "input:document \u2192 document text extraction with page boundaries \u2192 wrapped text page renderer / slides \u2192 aspect-preserving PDF page writer \u2192 output:pdf",
+      "input_size": 35282,
+      "output_size": 5073,
+      "duration": 0.046714999999949214,
+      "warnings": [
+        "DOCX text is extracted; original layout, styles and embedded artwork are not preserved."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\word.pdf",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PDF document",
+      "destination_format": "mp4",
+      "classification": "Semantic conversion",
+      "route": "input:document \u2192 PDF page renderer \u2192 slideshow video encoder \u2192 output:mp4",
+      "input_size": 1135,
+      "output_size": 4571,
+      "duration": 0.44674510000004375,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\slideshow.mp4",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video (h264, mov_text)",
+      "destination_format": "pdf",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 FFmpeg sampling / seconds bounded frame sampler \u2192 aspect-preserving PDF page writer \u2192 output:pdf",
+      "input_size": 4571,
+      "output_size": 7179,
+      "duration": 0.17169490000014775,
+      "warnings": [
+        "Frame extraction retained 3 frames; maximum 3."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\frames.pdf",
+      "additional_paths": []
+    },
+    {
+      "input_format": "BINARY binary",
+      "destination_format": "xyz",
+      "classification": "Binary interpretation",
+      "route": "input:binary \u2192 bounded binary reader + streaming SHA-256 \u2192 base64 metadata envelope (JSON/XML/CSV; unknown extensions contain JSON) \u2192 output:xyz",
+      "input_size": 1024,
+      "output_size": 1686,
+      "duration": 0.07405090000020209,
+      "warnings": [
+        ".xyz has no registered encoder. Output is a UTF-8 JSON envelope with this extension; it is not a valid XYZ codec/container."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\bytes.xyz",
+      "additional_paths": []
+    },
+    {
+      "input_format": "WAV audio (pcm_s16le)",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:audio \u2192 AudioData: local media source \u2192 audio metadata \u2192 offline transcription \u2192 signal analysis \u2192 text/document writer \u2192 output:txt",
+      "input_size": 8864,
+      "output_size": 737,
+      "duration": 0.15263249999998152,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\audio-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video (h264, mov_text)",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 embedded subtitles \u2192 metadata \u2192 offline transcription \u2192 OCR \u2192 media analysis \u2192 text/document writer \u2192 output:txt",
+      "input_size": 4571,
+      "output_size": 1045,
+      "duration": 0.27811750000000757,
+      "warnings": [
+        "Video soundtrack analysis unavailable/failed: ffmpeg.EXE failed:\n[out#0/wav @ 0000027428ae27c0] Output file does not contain any stream\r\nError opening output file C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\.any2any-m_n_7t87\\analysis-1.wav.\r\nError opening output files: Invalid argument\r\n"
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\video-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PNG image",
+      "destination_format": "json",
+      "classification": "Semantic conversion",
+      "route": "input:image \u2192 image metadata / EXIF \u2192 OCR \u2192 ASCII art / pixel statistics \u2192 semantic text report serializer \u2192 output:json",
+      "input_size": 211,
+      "output_size": 3063,
+      "duration": 0.014074100000016188,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\image-report.json",
+      "additional_paths": []
+    },
+    {
+      "input_format": "XLSX table",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:table \u2192 structured table parser \u2192 readable aligned worksheet tables \u2192 text/document writer \u2192 output:txt",
+      "input_size": 4867,
+      "output_size": 73,
+      "duration": 0.014967800000249554,
+      "warnings": [
+        "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\table-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "TXT text",
+      "destination_format": "mp4",
+      "classification": "Semantic conversion",
+      "route": "input:text \u2192 bounded text decoder \u2192 wrapped text page renderer / scroll \u2192 slideshow video encoder \u2192 output:mp4",
+      "input_size": 38,
+      "output_size": 5577,
+      "duration": 0.29773900000009235,
+      "warnings": [
+        "Scrolling video duration is capped at 120 seconds and the configured page/time budget; later text may be omitted."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\scroll.mp4",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video (h264, mov_text)",
+      "destination_format": "png",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 FFmpeg contact / even bounded frame sampler \u2192 Pillow PNG encoder \u2192 output:png",
+      "input_size": 4571,
+      "output_size": 3010,
+      "duration": 0.16133289999970657,
+      "warnings": [
+        "Frame extraction retained 3 frames; maximum 3."
+      ],
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\contact.png",
+      "additional_paths": []
+    }
+  ],
+  "gui": "Tk + drag-and-drop initialized successfully",
+  "batch": [
+    {
+      "source": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\input.png",
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\converted-001.webp",
+      "status": "complete",
+      "progress": 1,
+      "result": {
+        "input_format": "PNG image",
+        "destination_format": "webp",
+        "classification": "Native conversion",
+        "route": "input:image \u2192 Pillow image decoder \u2192 Pillow WEBP encoder \u2192 output:webp",
+        "input_size": 211,
+        "output_size": 96,
+        "duration": 0.004551300000002811,
+        "warnings": [],
+        "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\converted-001.webp",
+        "additional_paths": []
+      },
+      "error": ""
+    },
+    {
+      "source": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\input.xlsx",
+      "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\converted-002.webp",
+      "status": "complete",
+      "progress": 1,
+      "result": {
+        "input_format": "XLSX table",
+        "destination_format": "webp",
+        "classification": "Semantic conversion",
+        "route": "input:table \u2192 structured table parser \u2192 spreadsheet paginated table renderer / sheets \u2192 Pillow WEBP encoder \u2192 output:webp",
+        "input_size": 4867,
+        "output_size": 3226,
+        "duration": 0.01290530000005674,
+        "warnings": [
+          "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained."
+        ],
+        "destination": "C:\\Users\\Win\\Documents\\Any2AnyConverter\\build\\semantic-system\\converted-002.webp",
+        "additional_paths": []
+      },
+      "error": ""
+    }
+  ],
+  "success": true
+}

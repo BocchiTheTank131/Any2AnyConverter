@@ -1,0 +1,249 @@
+{
+  "capabilities": {
+    "ffmpeg": "C:\\Users\\Win\\AppData\\Local\\Temp\\_MEI00000d142\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+    "ffprobe": "Unavailable",
+    "soffice": "Unavailable",
+    "magick": "Unavailable",
+    "PIL": "Available",
+    "pymupdf": "Available",
+    "openpyxl": "Available",
+    "docx": "Available",
+    "pptx": "Available",
+    "py7zr": "Available",
+    "tkinterdnd2": "Available"
+  },
+  "results": [
+    {
+      "input_format": "PNG image",
+      "destination_format": "jpg",
+      "classification": "Native conversion",
+      "route": "input:image \u2192 Pillow image decoder \u2192 Pillow JPG encoder \u2192 output:jpg",
+      "input_size": 211,
+      "output_size": 725,
+      "duration": 0.016918400000122347,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\image.jpg",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PNG image",
+      "destination_format": "wav",
+      "classification": "Semantic conversion",
+      "route": "input:image \u2192 Pillow image decoder \u2192 image sonification / brightness \u2192 PCM / FFmpeg audio encoder \u2192 output:wav",
+      "input_size": 211,
+      "output_size": 8864,
+      "duration": 0.09633280000025479,
+      "warnings": [
+        "Image sonification maps horizontal position to time and vertical position to pitch (110 Hz upward); brightness controls amplitude."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\image.wav",
+      "additional_paths": []
+    },
+    {
+      "input_format": "XLSX table",
+      "destination_format": "mp3",
+      "classification": "Semantic conversion",
+      "route": "input:table \u2192 structured table parser \u2192 spreadsheet pitch sonification \u2192 PCM / FFmpeg audio encoder \u2192 output:mp3",
+      "input_size": 4868,
+      "output_size": 1271,
+      "duration": 0.18636650000007648,
+      "warnings": [
+        "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained.",
+        "Rows map to time; columns to tones. Non-numeric values use character sums. At most 16 columns are sounded."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\table.mp3",
+      "additional_paths": []
+    },
+    {
+      "input_format": "DOCX document",
+      "destination_format": "pdf",
+      "classification": "Semantic conversion",
+      "route": "input:document \u2192 document text extraction with page boundaries \u2192 wrapped text page renderer / slides \u2192 aspect-preserving PDF page writer \u2192 output:pdf",
+      "input_size": 35282,
+      "output_size": 5073,
+      "duration": 0.06615899999997055,
+      "warnings": [
+        "DOCX text is extracted; original layout, styles and embedded artwork are not preserved."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\word.pdf",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PDF document",
+      "destination_format": "mp4",
+      "classification": "Semantic conversion",
+      "route": "input:document \u2192 PDF page renderer \u2192 slideshow video encoder \u2192 output:mp4",
+      "input_size": 1135,
+      "output_size": 4571,
+      "duration": 0.35127539999984947,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\slideshow.mp4",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video",
+      "destination_format": "pdf",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 FFmpeg sampling / seconds bounded frame sampler \u2192 aspect-preserving PDF page writer \u2192 output:pdf",
+      "input_size": 4571,
+      "output_size": 7179,
+      "duration": 0.12188619999960792,
+      "warnings": [
+        "Frame extraction retained 3 frames; maximum 3."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\frames.pdf",
+      "additional_paths": []
+    },
+    {
+      "input_format": "BINARY binary",
+      "destination_format": "xyz",
+      "classification": "Binary interpretation",
+      "route": "input:binary \u2192 bounded binary reader + streaming SHA-256 \u2192 base64 metadata envelope (JSON/XML/CSV; unknown extensions contain JSON) \u2192 output:xyz",
+      "input_size": 1024,
+      "output_size": 1686,
+      "duration": 0.05166570000028514,
+      "warnings": [
+        ".xyz has no registered encoder. Output is a UTF-8 JSON envelope with this extension; it is not a valid XYZ codec/container."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\bytes.xyz",
+      "additional_paths": []
+    },
+    {
+      "input_format": "WAV audio",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:audio \u2192 AudioData: local media source \u2192 audio metadata \u2192 offline transcription \u2192 signal analysis \u2192 text/document writer \u2192 output:txt",
+      "input_size": 8864,
+      "output_size": 622,
+      "duration": 0.18885769999997137,
+      "warnings": [
+        "ffprobe unavailable; media metadata was parsed from the bundled FFmpeg header and may be less complete."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\audio-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 embedded subtitles \u2192 metadata \u2192 offline transcription \u2192 OCR \u2192 media analysis \u2192 text/document writer \u2192 output:txt",
+      "input_size": 4571,
+      "output_size": 428,
+      "duration": 0.28154700000004595,
+      "warnings": [
+        "ffprobe unavailable; media metadata was parsed from the bundled FFmpeg header and may be less complete.",
+        "Video soundtrack analysis unavailable/failed: ffmpeg-win-x86_64-v7.1.exe failed:\n[out#0/wav @ 00000222ff3976c0] Output file does not contain any stream\r\nError opening output file C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\.any2any-y957e99_\\analysis-1.wav.\r\nError opening output files: Invalid argument\r\n"
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\video-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "PNG image",
+      "destination_format": "json",
+      "classification": "Semantic conversion",
+      "route": "input:image \u2192 image metadata / EXIF \u2192 OCR \u2192 ASCII art / pixel statistics \u2192 semantic text report serializer \u2192 output:json",
+      "input_size": 211,
+      "output_size": 3063,
+      "duration": 0.0032476999999744294,
+      "warnings": [],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\image-report.json",
+      "additional_paths": []
+    },
+    {
+      "input_format": "XLSX table",
+      "destination_format": "txt",
+      "classification": "Semantic conversion",
+      "route": "input:table \u2192 structured table parser \u2192 readable aligned worksheet tables \u2192 text/document writer \u2192 output:txt",
+      "input_size": 4868,
+      "output_size": 73,
+      "duration": 0.0046431000000666245,
+      "warnings": [
+        "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\table-report.txt",
+      "additional_paths": []
+    },
+    {
+      "input_format": "TXT text",
+      "destination_format": "mp4",
+      "classification": "Semantic conversion",
+      "route": "input:text \u2192 bounded text decoder \u2192 wrapped text page renderer / scroll \u2192 slideshow video encoder \u2192 output:mp4",
+      "input_size": 38,
+      "output_size": 5577,
+      "duration": 0.17759499999965556,
+      "warnings": [
+        "Scrolling video duration is capped at 120 seconds and the configured page/time budget; later text may be omitted."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\scroll.mp4",
+      "additional_paths": []
+    },
+    {
+      "input_format": "MP4 video",
+      "destination_format": "png",
+      "classification": "Semantic conversion",
+      "route": "input:video \u2192 VideoData: local media source \u2192 FFmpeg contact / even bounded frame sampler \u2192 Pillow PNG encoder \u2192 output:png",
+      "input_size": 4571,
+      "output_size": 2993,
+      "duration": 0.19631699999990815,
+      "warnings": [
+        "ffprobe unavailable; media metadata was parsed from the bundled FFmpeg header and may be less complete.",
+        "Frame extraction retained 3 frames; maximum 3."
+      ],
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\contact.png",
+      "additional_paths": []
+    }
+  ],
+  "gui": "Tk + drag-and-drop initialized successfully",
+  "batch": [
+    {
+      "source": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\input.png",
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\converted-001.webp",
+      "status": "complete",
+      "progress": 1,
+      "result": {
+        "input_format": "PNG image",
+        "destination_format": "webp",
+        "classification": "Native conversion",
+        "route": "input:image \u2192 Pillow image decoder \u2192 Pillow WEBP encoder \u2192 output:webp",
+        "input_size": 211,
+        "output_size": 96,
+        "duration": 0.003523200000017823,
+        "warnings": [],
+        "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\converted-001.webp",
+        "additional_paths": []
+      },
+      "error": ""
+    },
+    {
+      "source": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\input.xlsx",
+      "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\converted-002.webp",
+      "status": "complete",
+      "progress": 1,
+      "result": {
+        "input_format": "XLSX table",
+        "destination_format": "webp",
+        "classification": "Semantic conversion",
+        "route": "input:table \u2192 structured table parser \u2192 spreadsheet paginated table renderer / sheets \u2192 Pillow WEBP encoder \u2192 output:webp",
+        "input_size": 4868,
+        "output_size": 3226,
+        "duration": 0.012778499999967607,
+        "warnings": [
+          "Spreadsheet conversions use cached formula values; formulas, styles and macros are not retained."
+        ],
+        "destination": "C:\\Users\\Win\\AppData\\Local\\Temp\\Any2Any Portable \u03a9 bwdcn5nx\\results bundled\\converted-002.webp",
+        "additional_paths": []
+      },
+      "error": ""
+    }
+  ],
+  "success": true,
+  "portable_test": {
+    "single_executable_only": true,
+    "outside_project": true,
+    "different_working_directory": true,
+    "spaces_and_unicode_path": true,
+    "empty_path": true,
+    "sha256": "8a1963e5700d7dedcc20c68476ebf2612c75c1e363e8278391366aa7052dde99",
+    "executable_size": 94109928
+  }
+}
